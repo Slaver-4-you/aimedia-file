@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMedia.bar - Дизайн v14.3 (Главная)</title> <!-- Обновил title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <header class="site-header-mobile">
+        <div class="header-content-wrapper">
+            <div class="header-logo">
+                <!-- Новая структура логотипа -->
+                <span class="logo-text-part logo-a">A</span>
+                <span class="logo-icon-wrapper">
+                    <i class="fa-solid fa-martini-glass"></i> <!-- Иконка вместо 'i' -->
+                </span>
+                <span class="logo-text-part logo-media">MEDIA.BAR</span>
+            </div>
+            <div class="top-bar-actions">
+                <!-- Остальные элементы без изменений структуры -->
+                <div class="search-container" id="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <span class="search-placeholder">Поиск...</span>
+                </div>
+                <button class="top-action-btn" id="notifications-btn"><i class="fas fa-bell"></i></button>
+                <div class="user-avatar-placeholder" id="user-avatar">
+                    <img src="images/avatar.png" alt="User Avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основная контентная область -->
+    <div class="main-content-area">
+
+        <!-- ============================================= -->
+        <!-- Контент секции "Главная" (управляется JS)   -->
+        <!-- ============================================= -->
+        <div class="home-content" data-section-content="home">
+
+            <!-- Блок 1: Spotlight / Промо -->
+            <section class="spotlight-section clickable" id="spotlight-section">
+                <div class="spotlight-content spotlight-event">
+                     <div class="spotlight-icon"><i class="fas fa-bullhorn"></i></div> <!-- Вернули громкоговоритель -->
+                     <div class="spotlight-text">
+                         <h3>Событие дня: Выбран Артист Месяца!</h3>
+                         <p>@FeaturedArtist покорил чарты! Узнай подробности.</p>
+                     </div>
+                     <div class="spotlight-arrow"><i class="fas fa-chevron-down"></i></div>
+                </div>
+                <!-- Скрытые подробности -->
+                <div class="spotlight-details" id="spotlight-details">
+                    <!-- Содержимое без изменений -->
+                     <hr>
+                    <div class="details-content">
+                        <img src="images/avatar.png" alt="Featured Artist" class="details-avatar">
+                        <div class="details-text">
+                            <p class="details-quote">"@FeaturedArtist: <em>'Нейросети? Просто еще один инструмент в моей студии. Главное - идея!'</em>"</p>
+                            <p class="details-achievements"><strong>Достижения:</strong> <i class="fas fa-headphones-simple"></i> 100+ слушателей в Радио, <i class="fas fa-trophy"></i> Топ Недели x3.</p>
+                            <a href="#" class="details-promo-link">Как стать Артистом Месяца?</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок 2: Слушают Сейчас -->
+            <section class="home-section">
+                <div class="section-subheader">
+                    <h2>Слушают сейчас</h2>
+                    <a href="#" class="see-all-link">См. все</a>
+                </div>
+                <div class="track-grid" id="listening-now-grid">
+                    <!-- Пример трека с добавленным счетчиком -->
+                    <div class="grid-track-item">
+                        <div class="grid-track-cover-wrapper">
+                            <img src="images/track1.jpeg" alt="Track 1" loading="lazy">
+                            <button class="grid-play-button"><i class="fas fa-play"></i></button>
+                            <!-- Вот счетчик -->
+                            <div class="listeners-count">
+                                <i class="fas fa-eye"></i>
+                                <span>123</span> <!-- Пример числа -->
+                            </div>
+                        </div>
+                        <span class="grid-track-title">ТРЕС НОКЕР - Продолжение...</span>
+                    </div>
+                     <div class="grid-track-item">
+                        <div class="grid-track-cover-wrapper">
+                            <img src="images/track2.jpeg" alt="Track 2" loading="lazy">
+                            <button class="grid-play-button"><i class="fas fa-play"></i></button>
+                             <div class="listeners-count">
+                                <i class="fas fa-eye"></i>
+                                <span>98</span>
+                            </div>
+                        </div>
+                        <span class="grid-track-title">Серенада войны</span>
+                    </div>
+                     <div class="grid-track-item">
+                        <div class="grid-track-cover-wrapper">
+                            <img src="images/track3.jpeg" alt="Track 3" loading="lazy">
+                            <button class="grid-play-button"><i class="fas fa-play"></i></button>
+                             <div class="listeners-count">
+                                <i class="fas fa-eye"></i>
+                                <span>75</span>
+                            </div>
+                        </div>
+                        <span class="grid-track-title">Wop-Bop, Shooby-Doop</span>
+                    </div>
+                     <div class="grid-track-item">
+                        <div class="grid-track-cover-wrapper">
+                            <img src="images/track4.jpeg" alt="Track 4" loading="lazy">
+                            <button class="grid-play-button"><i class="fas fa-play"></i></button>
+                             <div class="listeners-count">
+                                <i class="fas fa-eye"></i>
+                                <span>51</span>
+                            </div>
+                        </div>
+                        <span class="grid-track-title">Ank, tryka Aliens (v.2.1)©</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок 3: Недавно Прослушанные -->
+             <section class="home-section">
+                <div class="section-subheader">
+                    <h2>Вы недавно слушали</h2>
+                    <a href="#" class="see-all-link">Очистить</a>
+                </div>
+                <div class="horizontal-scroll-container recent-played-scroll" id="recent-played-list">
+                     <div class="recent-track-item">
+                         <div class="recent-track-cover-wrapper">
+                             <img src="images/track5.jpeg" alt="Track 5" loading="lazy">
+                             <button class="recent-play-button"><i class="fas fa-play"></i></button>
+                         </div>
+                         <span class="recent-track-title">Нейро-Блюз #5</span>
+                         <span class="recent-track-artist">@NeuroBot</span>
+                     </div>
+                     <div class="recent-track-item">
+                         <div class="recent-track-cover-wrapper">
+                              <img src="images/track6.jpeg" alt="Track 6" loading="lazy">
+                              <button class="recent-play-button"><i class="fas fa-play"></i></button>
+                         </div>
+                         <span class="recent-track-title">Электронные Сны</span>
+                          <span class="recent-track-artist">@SynthDreamer</span>
+                     </div>
+                     <!-- Добавить еще -->
+                </div>
+            </section>
+
+            <!-- Блок 4: Новые Релизы -->
+            <section class="home-section new-releases-section-compact"> <!-- Убрали "-compact", т.к. стиль стандартный -->
+                <div class="section-subheader">
+                     <h2>Свежие треки</h2>
+                     <a href="#" class="see-all-link">См. все</a> <!-- Эта ссылка может вести на отдельную страницу со всеми новинками -->
+                </div>
+                <!-- УБРАНА обертка horizontal-scroll-container -->
+                 <div class="track-list" id="new-releases-list"> <!-- Используем стандартный ID -->
+                     <!-- Карточки-заглушки -->
+                     <div class="track-card">
+                         <div class="track-cover-wrapper">
+                             <img src="images/track1.jpeg" alt="Обложка трека" class="track-cover" loading="lazy">
+                             <div class="playback-indicator">
+                                 <i class="fas fa-play"></i>
+                             </div>
+                         </div>
+                         <div class="track-info">
+                             <h3 class="track-title">ТРЕС НОКЕР - Продолжение...</h3>
+                             <p class="track-author rounded-pill">@alefair</p>
+                             <p class="track-time">00:00 / 03:30</p>
+                         </div>
+                         <div class="track-actions">
+                              <button class="action-btn favorite"><i class="far fa-star"></i></button>
+                              <button class="action-btn like"><i class="far fa-heart"></i></button>
+                         </div>
+                     </div>
+                     <div class="track-card">
+                         <div class="track-cover-wrapper">
+                             <img src="images/track2.jpeg" alt="Обложка трека" class="track-cover" loading="lazy">
+                             <div class="playback-indicator">
+                                 <i class="fas fa-play"></i>
+                             </div>
+                         </div>
+                         <div class="track-info">
+                             <h3 class="track-title">Серенада войны</h3>
+                             <p class="track-author rounded-pill">@Slaver</p>
+                             <p class="track-time">00:00 / 03:30</p>
+                         </div>
+                         <div class="track-actions">
+                              <button class="action-btn favorite"><i class="far fa-star"></i></button>
+                              <button class="action-btn like"><i class="far fa-heart"></i></button>
+                         </div>
+                     </div>
+                     <div class="track-card">
+                         <div class="track-cover-wrapper">
+                             <img src="images/track3.jpeg" alt="Обложка трека" class="track-cover" loading="lazy">
+                             <div class="playback-indicator">
+                                 <i class="fas fa-play"></i>
+                             </div>
+                         </div>
+                         <div class="track-info">
+                             <h3 class="track-title">Wop-Bop, Shooby-Doop</h3>
+                             <p class="track-author rounded-pill">@ixVadim</p>
+                             <p class="track-time">00:00 / 03:30</p>
+                         </div>
+                         <div class="track-actions">
+                              <button class="action-btn favorite"><i class="far fa-star"></i></button>
+                              <button class="action-btn like"><i class="far fa-heart"></i></button>
+                         </div>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Блок 5: Новости Сайта -->
+            <section class="home-section site-news-section-compact">
+                <div class="section-subheader">
+                     <h2>Новости и Анонсы</h2>
+                     <a href="#" class="see-all-link">Все новости</a>
+                </div>
+                <div class="news-list-compact" id="news-list-compact">
+                    <div class="news-item-compact">
+                        <h3 class="news-title-compact"><a href="#">Обновление алгоритмов радио!</a></h3>
+                        <p class="news-snippet-compact">Наше AI-радио стало еще умнее и теперь подбирает треки точнее...</p>
+                        <span class="news-date-compact">14.04.2025</span>
+                    </div>
+                    <div class="news-item-compact">
+                        <h3 class="news-title-compact"><a href="#">Конкурс на лучший AI-трек весны!</a></h3>
+                        <p class="news-snippet-compact">Принимайте участие и выигрывайте промо-баллы...</p>
+                        <span class="news-date-compact">10.04.2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок 6: Популярные Артисты -->
+            <section class="home-section popular-artists-section">
+                <div class="section-subheader">
+                    <h2>Популярные авторы</h2>
+                    <a href="#" class="see-all-link">См. все</a>
+                </div>
+               <div class="horizontal-scroll-container artist-bubble-scroll" id="popular-artists-list">
+                   <!-- Самый популярный -->
+                   <div class="artist-bubble top-artist">
+                       <img src="images/avatar.png" alt="Slaver" style="background-color: #ccc;">
+                       <span class="artist-bubble-name">@Slaver</span>
+                   </div>
+                   <!-- Заметные -->
+                   <div class="artist-bubble notable-artist">
+                        <img src="images/avatar.png" alt="ixVadim" style="background-color: #ccc;">
+                        <span class="artist-bubble-name">@ixVadim</span>
+                   </div>
+                   <div class="artist-bubble notable-artist">
+                        <img src="images/avatar.png" alt="NeuroBot" style="background-color: #ccc;">
+                        <span class="artist-bubble-name">@NeuroBot</span>
+                   </div>
+                   <!-- Обычные -->
+                   <div class="artist-bubble">
+                        <img src="images/avatar.png" alt="WaveAI" style="background-color: #ccc;">
+                        <span class="artist-bubble-name">@WaveAI</span>
+                   </div>
+                   <div class="artist-bubble">
+                        <img src="images/avatar.png" alt="Artist1" style="background-color: #ccc;">
+                        <span class="artist-bubble-name">@Artist1</span>
+                   </div>
+               </div>
+           </section>
+            <!-- Блок 7: Мои Плейлисты -->
+            <section class="home-section">
+                <div class="section-subheader">
+                    <h2>Ваши плейлисты</h2>
+                    <a href="#" class="see-all-link">См. все</a>
+                </div>
+                <div class="playlist-grid" id="my-playlists-grid">
+                    <div class="grid-playlist-item">
+                         <div class="grid-playlist-cover">
+                             <img src="images/track1.jpeg" alt="Плейлист 1">
+                         </div>
+                         <span class="grid-playlist-title">Мой ТОП</span>
+                    </div>
+                     <div class="grid-playlist-item">
+                         <div class="grid-playlist-cover">
+                             <img src="images/track1.jpeg" alt="Плейлист 2">
+                         </div>
+                         <span class="grid-playlist-title">Для работы</span>
+                    </div>
+                     <div class="grid-playlist-item">
+                         <div class="grid-playlist-cover">
+                              <img src="images/track1.jpeg" alt="Плейлист 3">
+                         </div>
+                         <span class="grid-playlist-title">Вечерний Chill</span>
+                    </div>
+                    <div class="grid-playlist-item placeholder" id="create-playlist-placeholder">
+                         <div class="grid-playlist-cover">
+                             <!-- Содержимое через CSS -->
+                         </div>
+                         <span class="grid-playlist-title placeholder-title">Создать плейлист</span>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- Конец home-content -->
+
+        <!-- ============================================= -->
+        <!-- Контент секции "Топы" (управляется JS)      -->
+        <!-- ============================================= -->
+        <div class="tops-content" data-section-content="tops" style="display: none;">
+             <div class="section-header">
+                 <h1 class="section-title">ТОП 6 НЕДЕЛИ</h1> <!-- Начальное значение -->
+                 <div class="top-dropdown-container" id="top-dropdown"> <!-- Управляется JS -->
+                    <button class="top-dropdown-toggle" id="toplist-toggle-btn">
+                        <span id="current-top-name">Неделя</span> <i class="fas fa-chevron-down dropdown-indicator"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="toplist-menu">
+                         <li><a class="dropdown-item active" href="#" data-tab="topWeekTracks" data-title="ТОП 6 НЕДЕЛИ">Неделя</a></li>
+                         <li><a class="dropdown-item" href="#" data-tab="topMonthTracks" data-title="ТОП 10 МЕСЯЦА">Месяц</a></li>
+                         <li><a class="dropdown-item" href="#" data-tab="topOfTheTopsTracks" data-title="ТОП ТОПОВ">Топ Топов</a></li>
+                     </ul>
+                 </div>
+            </div>
+            <main class="track-list" id="tops-track-list">
+                <!-- Заполняется JS -->
+            </main>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- Контент секции "Радио" (управляется JS)     -->
+        <!-- ============================================= -->
+        <div class="radio-content" data-section-content="radio" style="display: none;">
+             <div class="section-header">
+                  <h1 class="section-title">Радио</h1>
+             </div>
+             <p style="text-align:center; padding: 40px 0; opacity: 0.7;">Раздел Радио в разработке...</p>
+        </div>
+
+    </div> <!-- Конец main-content-area -->
+
+    <!-- Нижняя навигационная панель -->
+    <nav class="bottom-nav">
+        <button class="bottom-nav-btn active" data-section="home" data-title="Главная">
+            <i class="fas fa-home"></i>
+            <span>Главная</span>
+        </button>
+        <button class="bottom-nav-btn" data-section="tops" data-title="Топы">
+            <i class="fas fa-list-ol"></i>
+            <span>Топы</span>
+        </button>
+        <button class="bottom-nav-btn" data-section="radio" data-title="Радио">
+            <i class="fas fa-broadcast-tower"></i>
+            <span>Радио</span>
+        </button>
+    </nav>
+
+    <!-- Шаблоны для динамического контента -->
+    <template id="track-template">
+        <div class="track-card">
+            <div class="track-cover-wrapper">
+                <img src="" alt="Обложка трека" class="track-cover" loading="lazy">
+                <div class="playback-indicator"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="track-info">
+                <h3 class="track-title">Название трека</h3>
+                <p class="track-author rounded-pill">@Автор</p>
+                <p class="track-time">00:00 / 00:00</p>
+            </div>
+            <div class="track-actions">
+                 <button class="action-btn favorite"><i class="far fa-star"></i></button>
+                 <button class="action-btn like"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </template>
+
+    <template id="grid-track-template">
+        <div class="grid-track-item">
+            <div class="grid-track-cover-wrapper">
+                <img src="" alt="" loading="lazy">
+                <button class="grid-play-button"><i class="fas fa-play"></i></button>
+                <div class="listeners-count">
+                    <i class="fas fa-eye"></i>
+                    <span>0</span>
+                </div>
+            </div>
+            <span class="grid-track-title"></span>
+        </div>
+    </template>
+
+     <template id="recent-track-template">
+         <div class="recent-track-item">
+             <div class="recent-track-cover-wrapper">
+                 <img src="" alt="" loading="lazy">
+                 <button class="recent-play-button"><i class="fas fa-play"></i></button>
+             </div>
+             <span class="recent-track-title"></span>
+             <span class="recent-track-artist"></span>
+         </div>
+     </template>
+
+     <template id="news-item-template">
+        <div class="news-item-compact">
+            <h3 class="news-title-compact"><a href="#"></a></h3>
+            <p class="news-snippet-compact"></p>
+            <span class="news-date-compact"></span>
+        </div>
+     </template>
+
+     <template id="artist-bubble-template">
+          <div class="artist-bubble">
+             <img src="" alt="">
+             <span class="artist-bubble-name"></span>
+         </div>
+     </template>
+
+     <template id="playlist-item-template">
+         <div class="grid-playlist-item">
+             <div class="grid-playlist-cover">
+                 <img src="" alt="">
+             </div>
+             <span class="grid-playlist-title"></span>
+         </div>
+     </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
